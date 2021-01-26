@@ -507,23 +507,3 @@ input[type=number] {
     width: 40%;
     height: 30px;
 }
-
-/* Custom yg */
-.hidden {
-    display: none;
-}
-.active {
-    background-color: red;
-}
-.left {
-    transform: translate(-120%, 0%);
-}
-.animation-slideOutUp {
-    transition: all .5s linear;
-    transform: translateY(-120%);
-}
-
-.animation-slideInRight {
-    transition: all .5s linear;
-    transform: translateX(0%);
-}

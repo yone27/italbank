@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.querySelector("#item-container");
-    const container2 = document.querySelector("#container2");
-    const container3 = document.querySelector("#container3")
-
-    const test = document.getElementById("test")
+    const wrapperButtons = document.querySelector("#wrapperButtons");
+    const wrapperSections = document.querySelector("#wrapperSections")
+    const wrapper = document.getElementById("wrapper")
+    
     // recorriendo header targets
     for (const iterator of container.children) {
         iterator.addEventListener('click', async () => {
 
-            container.classList.add('animation-slideOutUp')
-            test.classList.add('left')
-            test.classList.remove('hidden')
-            await setTimeout(function () {
-                container.classList.add('hidden')
-            }, 500)
-            await setTimeout(() => {
-                test.classList.add('animation-slideInRight')
-            }, 600)
+            // Agregamos las animaciones a la botonera 1
+            container.classList.add('animate')
+            container.classList.add('animate__fadeOut')
 
-            for (const other of container3.children) {
+            // Agregando clases al segundo wrapper
+            wrapper.classList.remove('hidden')
+            wrapper.classList.add('overlap-a')
+            wrapper.classList.add('animate')
+            wrapper.classList.add('animate__fadeIn')
+
+            for (const other of wrapperSections.children) {
                 if (other.dataset.id === iterator.dataset.id) {
                     actives(iterator)
                     other.classList.remove('hidden')
@@ -29,15 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    for (const iterator of container2.children) {
+    for (const iterator of wrapperButtons.children) {
         iterator.addEventListener('click', () => {
             // recorriendo opciones targets
-            for (const other of container3.children) {
+            for (const other of wrapperSections.children) {
                 if (other.dataset.id === iterator.dataset.id) {
                     actives(iterator)
                     other.classList.remove('hidden')
                 } else {
-                    // iterator.classList.remove('active')
                     other.classList.add('hidden')
                 }
             }
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // comparacion con los botones para quitar activos y dejar solo uno
     function actives(iterator) {
-        for (const val of container2.children) {
+        for (const val of wrapperButtons.children) {
             if (val.dataset.id != iterator.dataset.id) {
                 val.classList.remove('active')
             } else {

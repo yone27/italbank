@@ -1,0 +1,58 @@
+.active {
+    background-color: red;
+}
+
+.left {
+    transform: translate(-120%, 0%);
+}
+
+.overlap-a {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.animation-slideOutUp {
+    transition: all .5s linear;
+    transform: translateY(-120%);
+}
+
+.animation-slideInRight {
+    transition: all .5s linear;
+    transform: translateX(0%);
+}
+
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* FadeOut */
+
+.animate__fadeOut {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* FadeIn */
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
