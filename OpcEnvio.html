@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Xatoxi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet"
+        type="text/css"
+        href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="encabezado">
+            <img class="logo"
+                src="img/logo.png">
+        </div>
+    </header>
+    <main class="wrapper">
+        <section class="grid-2"
+            id="item-container">
+            <article class="grid-item-Opc grid-item-2"
+                data-id="billetera">
+                <h1>Billetera</h1>
+            </article>
+            <article class="grid-item-Opc grid-item-2"
+                data-id="encomienda">
+                <h1>Encomienda</h1>
+            </article>
+            <article class="grid-item-Opc grid-item-2"
+                data-id="transferencia">
+                <h1>Transferencia</h1>
+            </article>
+        </section>
+        <div id="test" class="hidden">
+            <section class="grid-3"
+                id="container2">
+                <article class="grid-item grid-item-Opc-2"
+                    data-id="billetera">
+                    <h1>Billetera</h1>
+                </article>
+                <article class="grid-item grid-item-Opc-2"
+                    data-id="encomienda">
+                    <h1>Encomienda</h1>
+                </article>
+                <article class="grid-item grid-item-Opc-2"
+                    data-id="transferencia">
+                    <h1>Transferencia</h1>
+                </article>
+            </section>
+            <div id="container3">
+                <div data-id="billetera" class="hidden">
+                    <section class="grid-section grid-row marginSect">
+                        <aside>
+                            <div class="grid-item-no-border grid-item-2">
+                                <label for="amount"
+                                    class="font-Bold">MONTO</label>
+                                <input type="number"
+                                    name=""
+                                    id="amount"
+                                    pattern="[0-9]+([\.,][0-9]+)?"
+                                    step=".01"
+                                    placeholder="0,00">
+                            </div>
+                        </aside>
+                    </section>
+                    <div class="section-Titles">
+                        <h1 class="titles">BENEFICIARIO</h1>
+                    </div>
+                    <section class="marginSect">
+                        <aside class="aside">
+                            <select name="beneficiario"
+                                id="beneficiario"
+                                class="select-width-user select-appearance-user">
+                                <option value="">algo1</option>
+                                <option value="">algo</option>
+                                <option value="">algo</option>
+                                <option value="">algo</option>
+                                <option value="">algo</option>
+                                <option value="">algo</option>
+                            </select>
+                            <button class="btn-contacts btn">
+                                <figure><img src="img/address-book.png"
+                                        alt=""></figure>
+                            </button>
+                            <button class="btn-search btn">
+                                <figure><img src="img/search.png"
+                                        alt=""></figure>
+                            </button>
+                        </aside>
+                    </section>
+                    <section class="grid-section grid-row marginSect">
+                        <figure class="figure-img"><img src="img/LOCK.png"
+                                alt=""
+                                class="img-pin"></figure>
+                    </section>
+                </div>
+                <div data-id="encomienda" class="hidden" style="background: red;">
+                    <h2>Encomienda</h2>
+                </div>
+                <div data-id="transferencia" class="hidden" style="background: red;">
+                    <h2>Transferencia</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="pie_pagina">
+            <h6>by XATOXI</h6>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+
+</body>
+
+</html> 
